@@ -1,0 +1,37 @@
+.window {
+    margin-top: 30vh;
+}
+
+.spacerTop {
+    aspect-ratio: 960/100;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url("../../../public/Spacers/literatureSpacerTop.svg");
+}
+
+.content {
+    background-color: #010B2E;
+    height: 500px;
+    /* margin-left: -40px; */
+    flex-direction: column;
+}
+
+.poetDev {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
+.image {
+    border-radius: 50%;
+}
+
+.poetName {
+    color: #fff;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    font-weight: 600;
+}

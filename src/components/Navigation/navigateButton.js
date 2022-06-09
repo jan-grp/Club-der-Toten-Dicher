@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import styled from 'styled-components'
-
+import { FiChevronsDown } from 'react-icons/fi'
 
 const ButtonWindow = styled(motion.div)`
     background-color: ${props => props.backgroundcolor};
@@ -39,6 +39,7 @@ const NavigationButton = ({
             textcolor={textColor}
         >
             weiterlesen
+            <FiChevronsDown size={14} />
         </ButtonWindow>
     )
 }

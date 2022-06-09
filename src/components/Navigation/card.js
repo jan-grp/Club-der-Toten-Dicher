@@ -6,37 +6,65 @@ import NavigationButton from './navigateButton'
 import styles from './card.module.css'
 
 const CardWindow = styled.div`
-    ackground-color: ${props => props.backgroundcolor}
-    width: 200px;
+    background-color: ${props => props.backgroundcolor};
+    width: clamp(150px, 400px, 45%);
     padding-top: 15px;
     border-radius: 15px;
     display: flex;
     flex-direction: column;
     padding-bottom: 20px;
-    margin-left: 200px;
+    margin-top: 10px;
+`
+
+const Title = styled.div`
+    color: ${props => props.textcolor};
+    font-weight: bold;
+    font-size: 20px;
+    display: flex;
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+    letter-spacing: 1px;
+`
+const Content = styled.div`
+    color: ${props => props.textcolor};
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-left: 15px;
+    margin-right: 10px;
 `
 
 const NavigationCard = ({
     backgroundColor,
-    textColor,
+    titleColor,
     buttonColor,
     buttonBackgroundColor,
-    buttonBorderColor
+    buttonBorderColor,
+    contentText,
+    contentColor,
+    contentImage,
+    titleText
 }) => {
 
     return(
         <CardWindow
             backgroundcolor={backgroundColor}
         >
-            <div className={styles.title}>
-                Charaktere
-            </div>
+            <Title
+                textcolor={titleColor}
+            >
+                {titleText}
+            </Title>
 
-            <hr className={styles.titleDevider}/>
+            <hr className={styles.titleDevider} />
 
-            <div className={styles.content}>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
-            </div>
+            <Content 
+                textcolor={contentColor}
+            >
+                {contentText}
+            </Content>
 
             <NavigationButton 
                 backgroundColor={buttonBackgroundColor}
