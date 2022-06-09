@@ -1,0 +1,53 @@
+/* .window {
+    height: min-content;
+    height: 200px;
+    color: #fff;
+
+
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+} */
+
+.window {
+    background-color: #012038;
+    height: min-content;
+    height: 200px;
+    color: #fff;
+}
+
+.spacer {
+    aspect-ratio: 960/100;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.layerBlue {
+    background-image: url("../../public/Spacers/layered-waves-haikei1.svg");
+}
+
+.content {
+    background-color: #012038;
+    display: flex;
+}
+
+.hambornDiv {
+    bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: auto;
+
+    padding-bottom: 10px;
+    padding-left: 10px;
+
+    font-size: 12px;
+}
+
+.hambornLink {
+    
+}
