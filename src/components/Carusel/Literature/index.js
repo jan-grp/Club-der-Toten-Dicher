@@ -1,45 +1,71 @@
+import React from 'react'
 import Image from 'next/image'
+import { useState, forwardRef } from 'react'
 
 import styles from "./literatur.module.css"
-
-import nietzsche from "../../../public/Images/Poets/Nietzsche.jpg"
+import { FaQuoteRight } from 'react-icons/fa'
 
 import Poem from './poem'
 import PoemSelector from './selector'
+import Poet from './poet'
 
-const wahrheitUndLüge = "In irgend einem abgelegenen Winkel des in zahllosen Sonnensystemen flimmernd ausgegossenen Weltalls gab es einmal ein Gestirn, auf dem kluge Tiere das Erkennen erfanden. Es war die hochmütigste und verlogenste Minute der 'Weltgeschichte': aber doch nur eine Minute. Nach wenigen Atemzügen der Natur erstarrte das Gestirn, und die klugen Tiere mußten sterben. - So könnte jemand eine Fabel erfinden und würde doch nicht genügend illustriert haben, wie kläglich, wie schattenhaft und flüchtig, wie zwecklos und beliebig sich der menschliche Intellekt innerhalb der Natur ausnimmt. Es gab Ewigkeiten, in denen er nicht war; wenn es wieder mit ihm vorbei ist, wird sich nichts begeben haben. Denn es gibt für jenen Intellekt keine weitere Mission, die über das Menschenleben hinausführte."
+import { poems } from './data'
 
-const LiteratureContent = () => {
+// eslint-disable-next-line react/display-name
+const LiteratureContent = forwardRef((props, ref) => {
 
-   return(
-       <div className={styles.window}>
+    const [selectedIndex, setSelectedIndex] = useState(0)
+
+    const navigate = (direction) => {
+        if (direction === "left") {
+            if (selectedIndex > 0) {
+                setSelectedIndex(selectedIndex - 1)
+            }
+        } else {
+            if (selectedIndex < poems.length - 1) {
+                setSelectedIndex(selectedIndex + 1)
+            }
+        }
+    }
+
+    return(
+        <div 
+            className={styles.window}
+            ref={ref}
+        >
             <div className={styles.spacerTop} />
 
             <div className={styles.content}>
+
                 <div className={styles.topRow}>
-                    <div className={styles.poetDev}>
-                        <Image 
-                            src={nietzsche} 
-                            alt="nietzscg"
-                            width={300}
-                            height={300}
-                            className={styles.image}
-                        />
+                    <Poet 
+                        image={poems[selectedIndex].image}
+                        name={poems[selectedIndex].author}
+                    />
 
-                        <label className={styles.poetName}>Friedrich W. Nietzsche</label>
-                    </div>
+                    <FaQuoteRight color='#fff' size={50}/>
 
-                    <Poem text={wahrheitUndLüge}/>
+                    <Poem 
+                        title={poems[selectedIndex].title}
+                        date={poems[selectedIndex].date}
+                        text={poems[selectedIndex].text}
+                    />
                 </div>
 
                 <PoemSelector 
-                    poemArray={["cool", "auch cool", "sehr cool"]} 
+                    poemArray={poems}
+                    selectedIndex={selectedIndex}
+                    onSelection={navigate}
                 />
-            </div>
 
-            
+                <button
+                    onClick={() => console.log("width: ",window.innerWidth)}
+                >
+                    test
+                </button>
+            </div>     
        </div>
-   ) 
-}
+    ) 
+})
 
 export default LiteratureContent;

@@ -45,7 +45,8 @@ const NavigationCard = ({
     contentText,
     contentColor,
     contentImage,
-    titleText
+    titleText,
+    scrollToSection
 }) => {
 
     return(
@@ -70,6 +71,7 @@ const NavigationCard = ({
                 backgroundColor={buttonBackgroundColor}
                 textColor={buttonColor}
                 borderColor={buttonBorderColor}
+                scrollToSection={scrollToSection}
             />
         </CardWindow>
     )

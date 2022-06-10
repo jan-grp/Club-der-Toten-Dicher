@@ -23,6 +23,7 @@ const NavigationButton = ({
     backgroundColor, 
     borderColor, 
     textColor,
+    scrollToSection
 }) => {
 
 
@@ -37,6 +38,7 @@ const NavigationButton = ({
             backgroundcolor={backgroundColor}
             bordercolor={borderColor}
             textcolor={textColor}
+            onClick={scrollToSection}
         >
             weiterlesen
             <FiChevronsDown size={14} />

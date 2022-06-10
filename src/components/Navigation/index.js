@@ -9,7 +9,9 @@ const content = [
   
 ]
 
-const ContentNavigation = () => {
+const ContentNavigation = ({
+    scrollToPoems
+}) => {
 
     return (
         <motion.div
@@ -35,6 +37,8 @@ const ContentNavigation = () => {
                 contentText={content[0]}
                 titleText={"Lyrik"}
                 contentColor={"#fff"}
+
+                scrollToSection={scrollToPoems}
             />
 
             <NavigationCard 

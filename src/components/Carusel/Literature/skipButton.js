@@ -19,7 +19,8 @@ const Button = styled(motion.div)`
 `
 
 const SkipButton = ({
-    direction
+    direction,
+    onSelection
 }) => {
     const [backgroundColor, setBackgroundColor] = useState("rgba(212, 211, 212, 0.2)")
 
@@ -29,6 +30,11 @@ const SkipButton = ({
             whileHover={{
                 backgroundColor: "rgba(252, 252, 252, .9)"
             }}
+            whileTap={{
+                scale: .8,
+                backgroundColor: "rgba(252, 252, 252, .9)"
+            }}
+            onClick={() => onSelection(direction)}
         >
             {
                 direction == "left" && <AiOutlineArrowLeft 

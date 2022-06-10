@@ -1,9 +1,8 @@
 .window {
     height: min-content;
-    height: 200px;
     color: #fff;
     width: 100%;
-
+    overflow: hidden;
 }
 
 .spacer {

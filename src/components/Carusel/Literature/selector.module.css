@@ -3,7 +3,8 @@
     flex-direction: row;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 60px;
+    margin-top: auto;
+    margin-bottom: 40px;
     align-items: center;
 }
 
