@@ -12,9 +12,18 @@
 
 .content {
     background-color: #010B2E;
-    height: 500px;
+    height: fit-content;
     /* margin-left: -40px; */
     flex-direction: column;
+    display: flex;
+    position: relative;
+    padding-bottom:40px;
+}
+
+.topRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .poetDev {
