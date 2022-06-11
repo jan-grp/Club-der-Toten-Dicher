@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
-import { useState, forwardRef } from 'react'
+import { useState, forwardRef, useEffect } from 'react'
+import useWindowDimensions from '../../../utils/hooks/window'
 
 import styles from "./literatur.module.css"
 import { FaQuoteRight } from 'react-icons/fa'
@@ -11,10 +12,12 @@ import Poet from './poet'
 
 import { poems } from './data'
 
+const MIN_WIDTH = 1180
+
 // eslint-disable-next-line react/display-name
 const LiteratureContent = forwardRef((props, ref) => {
-
     const [selectedIndex, setSelectedIndex] = useState(0)
+    const [width, setWidth] = useState(null)
 
     const navigate = (direction) => {
         if (direction === "left") {
@@ -28,6 +31,10 @@ const LiteratureContent = forwardRef((props, ref) => {
         }
     }
 
+    useEffect(() => {
+        setWidth(window.innerWidth)
+    }, [])
+
     return(
         <div 
             className={styles.window}
@@ -35,20 +42,25 @@ const LiteratureContent = forwardRef((props, ref) => {
         >
             <div className={styles.spacerTop} />
 
-            <div className={styles.content}>
+            <div 
+                className={
+                    width > MIN_WIDTH ? styles.content : styles.contentMobile
+                }
+            >
 
                 <div className={styles.topRow}>
-                    <Poet 
+                    {width > MIN_WIDTH && <Poet 
                         image={poems[selectedIndex].image}
                         name={poems[selectedIndex].author}
-                    />
+                    />}
 
-                    <FaQuoteRight color='#fff' size={50}/>
-
+                    {width > MIN_WIDTH && <FaQuoteRight color='#fff' size={50}/>}
                     <Poem 
                         title={poems[selectedIndex].title}
                         date={poems[selectedIndex].date}
                         text={poems[selectedIndex].text}
+                        author={poems[selectedIndex].author}
+                        width={width || 0}
                     />
                 </div>
 
@@ -57,12 +69,6 @@ const LiteratureContent = forwardRef((props, ref) => {
                     selectedIndex={selectedIndex}
                     onSelection={navigate}
                 />
-
-                <button
-                    onClick={() => console.log("width: ",window.innerWidth)}
-                >
-                    test
-                </button>
             </div>     
        </div>
     ) 

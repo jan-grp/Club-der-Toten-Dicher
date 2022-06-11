@@ -6,15 +6,21 @@ import { useState, useEffect } from 'react'
 
 import styles from './poem.module.css'
 
+const MIN_WIDTH = 1180
+
 const Poem = ({
     text,
     title,
-    date
+    date,
+    author,
+    width
 }) => {
 
     return(
         <motion.div
-            className={styles.window}
+            className={
+                width > MIN_WIDTH ? styles.window : styles.windowMobile
+            }
             initial={{
                 opacity: 0,
                 x: 200
@@ -28,9 +34,14 @@ const Poem = ({
         >
             <div className={styles.header}>
                 <p className={styles.title}>{title}</p>
+                {width < MIN_WIDTH && <p className={styles.author}>{author}</p>}
                 <p className={styles.date}>{date}</p>
             </div>
-            <div className={styles.text}>
+            <div 
+                className={
+                    width > MIN_WIDTH ? styles.text : styles.textMobile
+                }
+            >
                 {text}
             </div>
         </motion.div>

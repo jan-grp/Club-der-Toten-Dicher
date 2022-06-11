@@ -10,7 +10,8 @@ const content = [
 ]
 
 const ContentNavigation = ({
-    scrollToPoems
+    scrollToPoems,
+    scrollToCharakters,
 }) => {
 
     return (
@@ -26,6 +27,8 @@ const ContentNavigation = ({
                 contentText={content[0]}
                 titleText={"Charaktere"}
                 contentColor={"#fff"}
+
+                scrollToSection={scrollToCharakters}
             />
 
             <NavigationCard 

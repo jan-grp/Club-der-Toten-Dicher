@@ -3,6 +3,13 @@
     margin-left: 200px;
 }
 
+.windowMobile {
+    padding-right: 15px;
+    padding-left: 15px;
+    flex-wrap: wrap;
+    word-wrap: break-word;
+}
+
 .header {
     align-items: center;
 }
@@ -16,8 +23,8 @@
 
 .date {
     font-weight: 400;
-    font-size: 20px;
-    margin-top: -20px;
+    font-size: 18px;
+    margin-top: -15px;
     color: #CFCFCF;
 }
 
@@ -30,4 +37,21 @@
     line-height: 29px;
 
     color: #FFFFFF;
+}
+
+.textMobile {
+    height: fit-content;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 29px;
+
+    color: #FFFFFF;
+}
+
+.author {
+    font-weight: 400;
+    font-size: 20px;
+    margin-top: -20px;
+    color: #CFCFCF;
 }
