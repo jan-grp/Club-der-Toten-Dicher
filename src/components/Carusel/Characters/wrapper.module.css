@@ -10,7 +10,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-image: url("../public/Spacers/characters-top-black.svg");
+    background-image: url("../../../public/Spacers/characters-top-black.svg");
     /* margin-bottom: -100px; */
 }
 
@@ -23,11 +23,20 @@
     margin-right: auto;
 }
 
+.charactersTitleMobile {
+    color: #fff;
+    font-size: 49px;
+    font-weight: 800;
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .charactersSpacerBottom {
     aspect-ratio: 960/150;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-image: url("../public/Spacers/characters-bottom-black.svg");
+    background-image: url("../../../public/Spacers/characters-bottom-black.svg");
     /* margin-bottom: -100px; */
 }

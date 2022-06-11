@@ -3,23 +3,29 @@ import { forwardRef } from "react"
 
 import styles from "./characters.module.css"
 
-import ActorContainer from "./actor"
 import CharakterContainerMobile from "./charakterMobile"
+import ActorMobile from "./actorMobile"
 
 // eslint-disable-next-line react/display-name
 const CharakterContentMobile = forwardRef((props, ref) => {
 
     return(
-        <div className={styles.wrapper}>
-            <p className={styles.headline}>Charaktere</p>
-            <div
-                ref={ref}
-                className={styles.windowMobile}
-            >
-                <CharakterContainerMobile />
 
-            </div>
+        <div
+            ref={ref}
+            className={styles.windowMobile}
+        >
+            <CharakterContainerMobile 
+                characterDescription={props.characterDescription}
+                characterName={props.characterName}
+            />
+
+            <ActorMobile
+                actorImage={props.actorImage}
+                actorName={props.actorName}
+            />
         </div>
+
     )
 })
 

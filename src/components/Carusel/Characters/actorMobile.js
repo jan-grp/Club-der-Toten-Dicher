@@ -1,19 +1,18 @@
-import Image from 'next/image'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 
 import styles from './actor.module.css'
 
-const ActorContainer = ({
+const ActorMobile = ({
     actorName,
     actorImage
 }) => {
 
-    return (
+    return(
         <motion.div
-            className={styles.window}
+            className={styles.windowMobile}
             initial={{
                 opacity: 0,
-                y: 200
             }}
             whileInView={{ 
                 opacity: 1,
@@ -22,22 +21,21 @@ const ActorContainer = ({
             }}
             viewport={{ once: true, margin: "-80px" }}
         >
-            <div className={styles.imageDiv}>
+            <p className={styles.gespieltVon}>Gespielt von:</p>
+            
+            <div className={styles.imageDivMobile}>
                 <Image 
                     alt="gabriel"
                     src={actorImage}
                     className={styles.image}
                     width={240}
                     height={240}
-                    objectFit="cover"
                 />
             </div>
 
-            <p className={styles.name}>{actorName}</p>
-
-            <p className={styles.spielt}>Spielt:</p>
+            <p className={styles.nameMobile}>{actorName}</p>
         </motion.div>
     )
 }
 
-export default ActorContainer
+export default ActorMobile

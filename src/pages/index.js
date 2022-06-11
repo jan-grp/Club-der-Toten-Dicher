@@ -6,8 +6,9 @@ import { scrollTo } from '../utils/scroll'
 
 import ContentNavigation from '../components/Navigation'
 import LiteratureContent from '../components/Carusel/Literature'
-import CharactersContent from '../components/Carusel/Characters'
-import CharakterContainerMobile from '../components/Carusel/Characters/indexMobile'
+
+import CharactersWrapper from '../components/Carusel/Characters/wrapper'
+
 
 import styles from '../styles/Home.module.css'
 
@@ -16,7 +17,7 @@ export default function Home() {
   const scrollToPoems = () => scrollTo({ref: poemRef, duration: 500, offset: -100})
 
   const charactersRef = useRef(null)
-  const scrollToCharakters = () => scrollTo({ref: charactersRef, duration: 500, offset: -170})
+  const scrollToCharakters = () => scrollTo({ref: charactersRef, duration: 500, offset: 140})
 
   return (
     <div className={styles.window}>
@@ -29,10 +30,8 @@ export default function Home() {
         scrollToPoems={scrollToPoems}
         scrollToCharakters={scrollToCharakters}
       />
-      
-      <CharactersContent ref={charactersRef}/>
-      <CharactersContent />
-      <CharactersContent />
+
+      <CharactersWrapper scrollRef={charactersRef}/>
 
       <LiteratureContent ref={poemRef}/>
     </div>

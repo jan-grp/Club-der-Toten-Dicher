@@ -1,15 +1,16 @@
 import { motion } from 'framer-motion'
 
+
 import styles from './character.module.css'
 
-const CharakterContainerMobile = ({
+const CharakterContainer = ({
     characterName,
     characterDescription
 }) => {
 
     return(
         <motion.div
-            className={styles.windowMobile}
+            className={styles.window}
             initial={{
                 opacity: 0,
                 y: 200
@@ -21,13 +22,11 @@ const CharakterContainerMobile = ({
             }}
             viewport={{ once: true, margin: "-80px" }}
         >
-            <p className={styles.nameMobile}>{characterName}</p>
+            <p className={styles.name}>{characterName}</p>
 
-            <p className={styles.textMobile}>
-                {characterDescription}
-            </p>
+            <p className={styles.text}>{characterDescription}</p>
         </motion.div>
     )
 }
 
-export default CharakterContainerMobile
+export default CharakterContainer
