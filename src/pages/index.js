@@ -8,22 +8,33 @@ import ContentNavigation from '../components/Navigation'
 import LiteratureContent from '../components/Carusel/Literature'
 import CharactersWrapper from '../components/Carusel/Characters/wrapper'
 
-import { NavigationContext, SwitchNavigationContext, navigationOptions } from '../utils/context/navigation.context'
+import { 
+  NavigationContext, 
+  SwitchNavigationContext, 
+  navigationOptions,
+  NavigationOptionsContext,
+  SwitchNavigationOptionsContext
+} from '../utils/context/navigation.context'
 
 import styles from '../styles/Home.module.css'
 
 const MIN_WIDTH = 1300
 
 export default function Home() {
+  // navigation context
   const navigionContext = useContext(NavigationContext)
   const switchNavtigationContext = useContext(SwitchNavigationContext)
-  
+  const navigationOptionsContext = useContext(NavigationOptionsContext)
+  const switchNavigationOptionsContext = useContext(SwitchNavigationOptionsContext)
+
+  // defining settings for position detection
   const [characterThreshold, setCharacterThreshold] = useState(0.25)
   useEffect(() => {
     const width = window.innerWidth
     width > MIN_WIDTH ? setCharacterThreshold(0.25) : setCharacterThreshold(0.1)
   }, [])
 
+  // defining refs
   const { ref: navigationRef, inView: navigationInView } = useInView({ })
   const navigationScrollRef = useRef(null)
 
@@ -35,21 +46,40 @@ export default function Home() {
   const poemScrollRef = useRef(null)
   const scrollToPoems = () => scrollTo({ref: poemScrollRef, duration: 500, offset: -200})
 
+  // pushing refs to context
   useEffect(() => {
-    navigationInView &&  switchNavtigationContext("Top")
+    const newOptions = [...navigationOptionsContext]
+    newOptions[0].ref = navigationScrollRef
+    newOptions[1].ref = charactersScrollRef
+    newOptions[2].ref = poemScrollRef
+    switchNavigationOptionsContext(newOptions)
+  }, [])
+
+  // detecting position
+  useEffect(() => {
+    navigationInView &&  switchNavtigationContext({
+      name: "Top",
+      ref: null,
+    })
   }, [navigationInView])
 
   useEffect(() => {
-    charactersInView && switchNavtigationContext("Charaktere")
+    charactersInView && switchNavtigationContext({
+      name: "Charaktere",
+      ref: charactersScrollRef
+    })
   }, [charactersInView])
   
 
   useEffect(() => {
-    poemInView && switchNavtigationContext("Gedichte")
+    poemInView && switchNavtigationContext({
+      name: "Gedichte",
+      ref: poemScrollRef
+    })
   }, [poemInView])
 
   useEffect(() => {
-    console.log("navigation context: ", navigionContext)
+    console.log("navigation context: ", navigionContext.name)
   }, [navigionContext])
 
   return (

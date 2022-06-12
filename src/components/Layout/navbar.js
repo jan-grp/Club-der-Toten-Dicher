@@ -46,7 +46,7 @@ const ScrolledWindow = styled.div`
     padding-left: 20px;
     padding-right: 20px;
     justify-content: space-between;
-    border-bottom: rgb(0, 0, 0) solid 2px;
+    border-bottom: ${props => props.backgroundcolor ? "" : "rgb(0, 0, 0) solid 2px"}
 `
 
 const Navbar = () => {
@@ -57,7 +57,7 @@ const Navbar = () => {
     const [backgroundColor, setBackgroundColor] = useState('rgba(29,29,31,0.92)')
 
     useEffect(() => {
-        if(navigationContext !== "Top") {
+        if(navigationContext.name !== "Top") {
            setScrolled(true)
         } else {
             setScrolled(false)
@@ -67,7 +67,7 @@ const Navbar = () => {
     const toggleMenu = () => {
         if(!isOpen) {
             setIsOpen(true)
-            setBackgroundColor('#000')
+            setBackgroundColor('rgb(26, 26, 26)')
         } else {
             setIsOpen(false)
             setBackgroundColor('rgba(29,29,31,0.92)')
@@ -102,14 +102,14 @@ const Navbar = () => {
                         </motion.div>
                     </AnimatePresence>
 
-                    <DropdownMenu />
+                    <DropdownMenu close={() => setIsOpen(false)}/>
                 </ScrolledWindow>
             }
 
             {
                 // menu available but closed
                 (!isOpen && scrolled) && <ScrolledWindow
-                    backgroundcolor={backgroundColor}
+
                 >
                     <p className={styles.title}>Club der Toten Dichter</p>
 
