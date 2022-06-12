@@ -1,4 +1,4 @@
-
+import { forwardRef } from "react"
 import { motion } from "framer-motion"
 import NavigationCard from "./card"
 
@@ -9,14 +9,16 @@ const content = [
   
 ]
 
-const ContentNavigation = ({
+// eslint-disable-next-line react/display-name
+const ContentNavigation = forwardRef(({
     scrollToPoems,
     scrollToCharakters,
-}) => {
+}, ref) => {
 
     return (
         <motion.div
             className={styles.window}
+            ref={ref}
         >
             <NavigationCard 
                 backgroundColor={"#B197CF"}
@@ -56,6 +58,6 @@ const ContentNavigation = ({
             />
         </motion.div>
     )
-}
+})
 
 export default ContentNavigation

@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react'
+import React from 'react';
+import { useState, useEffect, forwardRef } from 'react'
 
 
 import CharacterContent from './index'
@@ -10,9 +11,8 @@ import data from './data'
 
 const MIN_WIDTH = 1300
 
-const CharactersWrapper = ({
-    scrollRef
-}) => {
+// eslint-disable-next-line react/display-name
+const CharactersWrapper = forwardRef((props, ref) => {
     const [width, setWidth] = useState(null)
 
     useEffect(() => {
@@ -20,10 +20,10 @@ const CharactersWrapper = ({
     }, [])
 
     return(
-        <>
+        <div ref={ref}>
             <div 
                 className={styles.charactersSpacerTop}
-                ref={scrollRef}
+                ref={props.charactersScrollRef}
             />
 
             <div className={styles.characters}>
@@ -55,8 +55,8 @@ const CharactersWrapper = ({
             </div>
 
             <div className={styles.charactersSpacerBottom} />
-        </>
+        </div>
     )
-}
+})
 
 export default CharactersWrapper

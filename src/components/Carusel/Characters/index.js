@@ -7,24 +7,28 @@ import ActorContainer from "./actor"
 import CharakterContainer from "./character"
 
 // eslint-disable-next-line react/display-name
-const CharacterContent = forwardRef((props, ref) => {
+const CharacterContent = ({
+    actorName,
+    actorImage,
+    characterName,
+    characterDescription,
+}) => {
     
     return(
         <div
-            ref={ref}
             className={styles.window}
         >
             <ActorContainer 
-                actorName={props.actorName}
-                actorImage={props.actorImage}
+                actorName={actorName}
+                actorImage={actorImage}
             />
 
             <CharakterContainer 
-                characterName={props.characterName}
-                characterDescription={props.characterDescription}
+                characterName={characterName}
+                characterDescription={characterDescription}
             />
         </div>
     )
-})
+}
 
 export default CharacterContent

@@ -46,6 +46,7 @@ const LiteratureContent = forwardRef((props, ref) => {
                 className={
                     width > MIN_WIDTH ? styles.content : styles.contentMobile
                 }
+                ref={props.poemScrollRef}
             >
 
                 <div className={styles.topRow}>

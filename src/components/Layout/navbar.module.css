@@ -1,6 +1,7 @@
 .window {
     height: 50px;
     background-color: rgba(29,29,31,0.92);
+    backdrop-filter: blur(10px);
     position: fixed;
     top: 0;
     width: 100%;
@@ -13,6 +14,25 @@
     color: #fff;
     padding-left: 20px;
 
+    justify-content: center;
+    border-bottom: rgb(0, 0, 0) solid 2px;
+}
+
+.windowScrolled {
+    height: 50px;
+    background-color: rgba(29,29,31,0.92);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+    margin-bottom: 50px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #fff;
+    padding-left: 20px;
+    padding-right: 20px;
     justify-content: space-between;
     border-bottom: rgb(0, 0, 0) solid 2px;
 }
@@ -25,6 +45,11 @@
     font-size: 18px;
     font-weight: bold;
     color: #fff;
-    margin-left: auto;
-    margin-right: auto;
+}
+
+.menuIcon {
+    display: flex;
+    padding: 0;
+    justify-content: baseline;
+    align-items: baseline;
 }

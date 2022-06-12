@@ -7,26 +7,29 @@ import CharakterContainerMobile from "./charakterMobile"
 import ActorMobile from "./actorMobile"
 
 // eslint-disable-next-line react/display-name
-const CharakterContentMobile = forwardRef((props, ref) => {
+const CharakterContentMobile = ({
+    actorName,
+    actorImage,
+    characterName,
+    characterDescription,
+}) => {
 
     return(
 
         <div
-            ref={ref}
             className={styles.windowMobile}
         >
             <CharakterContainerMobile 
-                characterDescription={props.characterDescription}
-                characterName={props.characterName}
+                characterDescription={characterDescription}
+                characterName={characterName}
             />
 
             <ActorMobile
-                actorImage={props.actorImage}
-                actorName={props.actorName}
+                actorImage={actorImage}
+                actorName={actorName}
             />
         </div>
 
     )
-})
-
+}
 export default CharakterContentMobile
