@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import styled from 'styled-components'
 
-import { BiChevronsDown } from 'react-icons/bI'
+import { BiChevronsDown } from 'react-icons/bi'
 
 const ReadMoreButton = styled(motion.button)`
     width: min-content;

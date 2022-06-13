@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
 
-import { BiChevronsUp } from 'react-icons/bI'
+import { BiChevronsUp } from 'react-icons/bi'
 
 const ShowLessButton = styled(motion.button)`
     width: fit-content;
