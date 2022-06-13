@@ -41,7 +41,7 @@ export default function Home() {
   const navigationScrollRef = useRef(null)
     
     // characters
-  const { ref: charactersRef, inView: charactersInView } = useInView({ threshold: characterThreshold })
+  const { ref: charactersRef, inView: charactersInView } = useInView({ threshold: 0.1})
   const charactersScrollRef = useRef(null)
   const scrollToCharakters = () => scrollTo({ref: charactersScrollRef, duration: 500, offset: 140})
 
@@ -60,6 +60,8 @@ export default function Home() {
   }, [])
 
   // detecting position
+
+    // top navigation
   useEffect(() => {
     navigationInView &&  switchNavtigationContext({
       name: "Top",
@@ -67,6 +69,7 @@ export default function Home() {
     })
   }, [navigationInView])
 
+    // characters
   useEffect(() => {
     console.log("characters in view")
     charactersInView && switchNavtigationContext({
@@ -75,7 +78,7 @@ export default function Home() {
     })
   }, [charactersInView])
   
-
+    // poems
   useEffect(() => {
     poemInView && switchNavtigationContext({
       name: "Gedichte",
@@ -83,6 +86,7 @@ export default function Home() {
     })
   }, [poemInView])
 
+  // logs (for debugging)
   useEffect(() => {
     // console.log("navigation context: ", navigionContext.name)
     // console.log("characters detection ref: ", charactersRef)

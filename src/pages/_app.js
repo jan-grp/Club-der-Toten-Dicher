@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Navbar from '../components/Layout/navbar'
 import Footer from '../components/Layout/footer'
+import { useRouter } from 'next/router'
 
 import Layout from '../components/Layout/layout'
 
@@ -15,6 +16,7 @@ import {
 } from '../utils/context/navigation.context'
 
 function MyApp({ Component, pageProps }) {
+  const router = useRouter()
   const [navigationState, setNavigationState] = useState(navigationOptions[0])
   const [navigationOptionsState, setNavigationOptionsState] = useState(navigationOptions)
 
@@ -23,8 +25,11 @@ function MyApp({ Component, pageProps }) {
       <SwitchNavigationOptionsContext.Provider value={setNavigationOptionsState}>
         <NavigationContext.Provider value={navigationState}>
           <SwitchNavigationContext.Provider value={setNavigationState}>
-            <Navbar />
-              <Component {...pageProps} />
+
+            { router.route == "/" && <Navbar />}
+
+            <Component {...pageProps} />
+
             <Footer />
           </SwitchNavigationContext.Provider>
         </NavigationContext.Provider>

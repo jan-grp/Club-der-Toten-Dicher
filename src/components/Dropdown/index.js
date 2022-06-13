@@ -1,5 +1,6 @@
 import { useState, useContext, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { useRouter } from 'next/router'
 
 import { scrollTo } from '../../utils/scroll/index'
 
@@ -16,6 +17,7 @@ import {
 const NavigationDropdown = ({
     close
 }) => {
+    const router = useRouter()
     const navigationContext = useContext(NavigationContext)
     const switchNavigationContext = useContext(SwitchNavigationContext)
     const navigationOptionsContext = useContext(NavigationOptionsContext)
@@ -30,6 +32,9 @@ const NavigationDropdown = ({
 
     const navigateTo = (index) => {
         const content = navigationOptionsContext[index]
+
+        if(content.name === "Artikel") return router.push('/artikel')
+
         let offset
         switch (content.name) {
             case "Charaktere":
@@ -39,7 +44,6 @@ const NavigationDropdown = ({
             case "Gedichte":
                 offset = -200
                 break;
-
             default:
                 offset = -50
         }
@@ -73,7 +77,6 @@ const NavigationDropdown = ({
                                 backgroundColor: "rgba(165, 165, 165, 0.15)"
                             }}
                             whileTap={{
-                                backgroundColor: "rgba(165, 165, 165, 0.15)",
                                 scale: .9
                             }}
                             onClick={() => navigateTo(index)}

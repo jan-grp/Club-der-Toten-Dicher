@@ -39,24 +39,24 @@ const characters = [
         character: "Todd Anderson",
         text: "Todd ist ein schüchterner und zurückhaltender neuer Schüler und teilt sich mit Neil ein Zimmer. Die beiden freunden sich an und Todd wird Teil von Neils Freundesgruppe."
     },
-    // {
-    //     actor: "Mio ten Venne",
-    //     image: mio,
-    //     character: "Knox Overstreet",
-    //     text: "Knox ist ein sehr verträumter Schüler mit Sinn für Romantik. Als er bei einem Essen mit den Freunden seiner Eltern auf Chris trifft, verliebt er sich unsterblich in sie. Bedauerlicher Weise ist sie jedoch schon mit Chet  zusammen."
-    // },
-    // {
-    //     actor: "Adina Franke",
-    //     image: adina,
-    //     character: "Steven Meeks",
-    //     text: "Meeks ist der Streber und Überflieger in der Klasse. Er hilft seinen Freunden regelmäßig bei den Hausaufgaben."
-    // },
-    // {
-    //     actor: "Jan Gröpper",
-    //     image: jan,
-    //     character: "Richard Cameron",
-    //     text: "Cameron ist sehr Karrierefokussiert und stets besorgt um seine Schulnoten. Er steht Mrs Keating eher skeptisch gegenüber, was zu Spannungen zwischen ihm und Charlie führt."
-    // },
+    {
+        actor: "Mio ten Venne",
+        image: mio,
+        character: "Knox Overstreet",
+        text: "Knox ist ein sehr verträumter Schüler mit Sinn für Romantik. Als er bei einem Essen mit den Freunden seiner Eltern auf Chris trifft, verliebt er sich unsterblich in sie. Bedauerlicher Weise ist sie jedoch schon mit Chet  zusammen."
+    },
+    {
+        actor: "Adina Franke",
+        image: adina,
+        character: "Steven Meeks",
+        text: "Meeks ist der Streber und Überflieger in der Klasse. Er hilft seinen Freunden regelmäßig bei den Hausaufgaben."
+    },
+    {
+        actor: "Jan Gröpper",
+        image: jan,
+        character: "Richard Cameron",
+        text: "Cameron ist sehr karrierefokussiert und stets besorgt um seine Schulnoten. Er steht Mrs Keating eher skeptisch gegenüber, was zu Spannungen zwischen ihm und Charlie führt."
+    },
     
 ]
 

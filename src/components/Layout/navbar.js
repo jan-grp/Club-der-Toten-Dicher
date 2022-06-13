@@ -13,7 +13,8 @@ import DropdownMenu from '../Dropdown/index'
 const Window = styled.div`
     height: 50px;
     background-color: rgba(29,29,31,0.92);
-    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
     position: fixed;
     top: 0;
     width: 100%;
@@ -33,6 +34,8 @@ const Window = styled.div`
 const ScrolledWindow = styled.div`
     height: 50px;
     background-color: ${props => props.backgroundcolor || 'rgba(29,29,31,0.92)'};
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
     position: fixed;
     top: 0;
     width: 100%;

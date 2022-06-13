@@ -14,9 +14,8 @@ export const navigationOptions = [
         ref: null,
     },
     {
-        name: "Footer",
-        ref: null,
-    },
+        name: "Artikel"
+    }
 ]
 
 export const NavigationOptionsContext = React.createContext(navigationOptions)

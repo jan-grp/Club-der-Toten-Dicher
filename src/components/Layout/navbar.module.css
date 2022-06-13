@@ -1,7 +1,8 @@
 .window {
     height: 50px;
     background-color: rgba(29,29,31,0.92);
-    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
     position: fixed;
     top: 0;
     width: 100%;
