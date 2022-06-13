@@ -30,6 +30,7 @@ const ActorMobile = ({
                     className={styles.image}
                     width={240}
                     height={240}
+                    objectFit="cover"
                 />
             </div>
 

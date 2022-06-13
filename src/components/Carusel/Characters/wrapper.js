@@ -17,6 +17,7 @@ const CharactersWrapper = forwardRef((props, ref) => {
 
     useEffect(() => {
         setWidth(window.innerWidth)
+        console.log("ref received from wrapper: ", ref)
     }, [])
 
     return(

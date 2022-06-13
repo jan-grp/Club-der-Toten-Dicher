@@ -2,20 +2,23 @@
     margin-top: 20vh;
 }
 
-.spacerTop {
+/* .spacerTop {
     aspect-ratio: 960/100;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-image: url("../../../public/Spacers/literatureSpacerTop.svg");
-}
+} */
 
 .content {
-    background-color: #010B2E;
+    /* background-color: #010B2E; */
+    background: rgb(84,17,17);
+    background: radial-gradient(circle, rgba(84,17,17,1) 17%, rgba(113,37,37,1) 56%, rgba(126,45,45,1) 79%, rgba(171,75,75,1) 100%);
     height: fit-content;
     flex-direction: column;
     display: flex;
     min-height: 560px;
+    padding-top: 60px;
 }
 
 .contentMobile {
@@ -33,6 +36,8 @@
     margin-left: auto;
     margin-right: auto;
     flex-wrap: wrap;
+    padding-bottom: 60px;
+
 }
 
 .poetDev {

@@ -35,13 +35,17 @@ export default function Home() {
   }, [])
 
   // defining refs
+
+    // top navigation
   const { ref: navigationRef, inView: navigationInView } = useInView({ })
   const navigationScrollRef = useRef(null)
-
+    
+    // characters
   const { ref: charactersRef, inView: charactersInView } = useInView({ threshold: characterThreshold })
   const charactersScrollRef = useRef(null)
   const scrollToCharakters = () => scrollTo({ref: charactersScrollRef, duration: 500, offset: 140})
 
+    // poems
   const { ref: poemRef, inView: poemInView } = useInView({ threshold: 0.2 })
   const poemScrollRef = useRef(null)
   const scrollToPoems = () => scrollTo({ref: poemScrollRef, duration: 500, offset: -200})
@@ -64,6 +68,7 @@ export default function Home() {
   }, [navigationInView])
 
   useEffect(() => {
+    console.log("characters in view")
     charactersInView && switchNavtigationContext({
       name: "Charaktere",
       ref: charactersScrollRef
@@ -79,7 +84,10 @@ export default function Home() {
   }, [poemInView])
 
   useEffect(() => {
-    console.log("navigation context: ", navigionContext.name)
+    // console.log("navigation context: ", navigionContext.name)
+    // console.log("characters detection ref: ", charactersRef)
+    // console.log("peoems detection ref: ", poemRef)
+    // console.log("navigation context options: ", navigationOptionsContext)
   }, [navigionContext])
 
   return (
