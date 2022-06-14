@@ -30,7 +30,7 @@ function MyApp({ Component, pageProps }) {
 
             <Component {...pageProps} />
 
-            <Footer />
+            { router.route != "impressum" && <Footer />}
           </SwitchNavigationContext.Provider>
         </NavigationContext.Provider>
       </SwitchNavigationOptionsContext.Provider>

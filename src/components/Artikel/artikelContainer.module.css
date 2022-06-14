@@ -6,8 +6,7 @@
     margin-right: auto;
 
     margin-top: 140px;
-    flex-wrap: wrap;
-    overflow-wrap: break-word;
+    overflow-y: hidden;
 }
 
 .artikelName{
@@ -15,6 +14,8 @@
     font-size: 40px;
 
     color: #000000;
+    overflow-x: hidden;
+    word-wrap: break-word;
 }
 
 .autherName {
@@ -31,6 +32,8 @@
     color: #333333;
     max-height: 30vh;
     margin-top: 34px;
+    overflow-x: hidden;
+    word-wrap: break-word;
 
     -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
     mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
