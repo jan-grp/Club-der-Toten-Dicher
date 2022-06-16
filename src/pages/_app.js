@@ -19,7 +19,7 @@ function MyApp({ Component, pageProps }) {
   const router = useRouter()
   const [navigationState, setNavigationState] = useState(navigationOptions[0])
   const [navigationOptionsState, setNavigationOptionsState] = useState(navigationOptions)
-
+  
   return (
     <NavigationOptionsContext.Provider value={navigationOptionsState}>
       <SwitchNavigationOptionsContext.Provider value={setNavigationOptionsState}>
@@ -30,7 +30,7 @@ function MyApp({ Component, pageProps }) {
 
             <Component {...pageProps} />
 
-            { router.route != "impressum" && <Footer />}
+            { router.route == "/" && <Footer />}
           </SwitchNavigationContext.Provider>
         </NavigationContext.Provider>
       </SwitchNavigationOptionsContext.Provider>

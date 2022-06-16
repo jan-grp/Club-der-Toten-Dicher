@@ -8,6 +8,7 @@ const ReadMoreButton = styled(motion.button)`
     margin-left: auto;
     margin-right: auto;
     margin-top: 5px;
+    margin-bottom: 5px;
     background-color: #fff;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
     border: 0;

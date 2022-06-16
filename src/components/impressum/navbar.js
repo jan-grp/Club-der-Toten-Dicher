@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import styled from 'styled-components'
+import { useRouter } from 'next/router'
 
 import ArtikelBackButton from "../Artikel/backButton";
 
@@ -34,7 +35,7 @@ const Titel = styled.p`
 `
 
 const ImpressumNavbar = () => {
-
+    const router = useRouter()
     
 
     return(
