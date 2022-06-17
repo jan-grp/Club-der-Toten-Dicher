@@ -1,6 +1,6 @@
 .window {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     margin-left: auto;
     margin-right: auto;
     width: fit-content;
@@ -10,39 +10,36 @@
     padding-top: 20px;
     border-radius: 20px;
     margin-top: 40px;
+    padding-bottom: 40px;
+}
+
+.columnTitleDiv {
+    display: flex;
+    flex-direction: row;
 }
 
 .columnHeadline {
     font-weight: 800;
     font-size: 21px;
+    min-width: 220px;
 }
 
 .person {
     font-weight: 700;
+    min-width: 220px;
 }
-
 
 .rolle {
     color: #999;
+    min-width: 220px
 }
 
-.rolleDiv {
-    margin-left: 60px;
-}
-
-.gruppenDiv {
-    margin-left: 60px;
-}
-
-.indiviudalGroups {
+.row {
     display: flex;
     flex-direction: row;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(24, 1fr);
-    grid-column-gap: 20px;
-    grid-row-gap: 13px;
+.group {
+    color: #999;
+    min-width: 220px  
 }

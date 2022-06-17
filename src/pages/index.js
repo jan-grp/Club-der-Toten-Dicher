@@ -101,11 +101,11 @@ export default function Home() {
         <meta name="Programmheft" content="Club der Toten Dichter" />
       </Head>
 
-      <ContentNavigation 
+      {/* <ContentNavigation 
         scrollToPoems={scrollToPoems}
         scrollToCharakters={scrollToCharakters}
         ref={navigationRef}
-      />
+      /> */}
 
       <CharactersWrapper 
         ref={charactersRef}
