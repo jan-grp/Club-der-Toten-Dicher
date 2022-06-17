@@ -1,13 +1,17 @@
-
+import styled from 'styled-components'
 
 import ArtikelNavbar from "../components/Artikel/navbar"
 import ArtikelContainer from "../components/Artikel/artikelContainer"
 
 import { artikel } from "../components/Artikel/data"
 
+const Window = styled.div`
+    padding-bottom: 80px;
+`
+
 const Arktikel = () => {
     return(
-        <div>
+        <Window>
             <ArtikelNavbar />
 
             {artikel.map((item, index) => (
@@ -16,7 +20,7 @@ const Arktikel = () => {
                     artikel={item}
                 />
             ))}
-        </div>
+        </Window>
     )
 }
 
