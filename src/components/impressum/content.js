@@ -78,12 +78,13 @@ const ImpressumContent = () => {
                     src={SchlossImage}
                     alt="image schloss hamborn"
                     objectFit='cover'
+                    priority
                 />
             </ImageDiv>
 
             <AufKarteSehen
                 whileHover={{
-                    textDecoration: "underline"
+                    textDecorationLine: "underline"
                 }}
                 href="https://www.google.com/maps/place/Schloss+Hamborn+1,+33178+Borchen/@51.6622827,8.7711915,18.24z/data=!4m13!1m7!3m6!1s0x47bbb31cd4c5bb65:0x88d2dca02fd3a898!2sSchloss+Hamborn,+33178+Borchen!3b1!8m2!3d51.6622437!4d8.7729716!3m4!1s0x47bbb31d32e74eed:0xcee34bd15cd97269!8m2!3d51.6624174!4d8.7711332"
             >

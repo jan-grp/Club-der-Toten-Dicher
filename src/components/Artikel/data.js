@@ -14,16 +14,21 @@ export const artikel = [
         blured: true
     },
     {
+        name: "Carpe Diem",
+        auther: "Levinia Radde",
+        text: "Die lateinische Phrase Carpe diem wurde im Jahr 23 v. Chr. erstmals von dem römischen Dichter Horao in der Ode „An Leukonoë“ verfasst. Wörtlich übersetzt bedeutet sie so viel wie „Pflücke den Tag“, welche aber im Volksmund mehr mit der Übersetzung „Nutze den Tag“ bekannt ist. Horao forderte in den Schlusszeilen der Ode die Leser auf, ihre knappe Lebenszeit zu nutzen und nichts auf den nächsten Tag zu verschieben. Dieser Gedanke wurde im Laufe der Zeit immer wieder in der Literatur aufgenommen, besonders nach dem 30-Jährigen Krieg in der Epoche des Barocks, mit dem Gedanken „Memento mori“ (Bedenke, dass du sterblich bist).",
+        blured: false
+    },
+    {
         name: "Schulsystem in den USA",
         auther: "Kristina Wispler",
         text: "In den USA gibt es kein einheitliches nationales Bildungssystem, das von der Regierung betrieben wird. Das amerikanische Schulsystem ist dreistufig und gliedert sich in Grundschule (Elementary School), Sekundarstufe (High School) und Universität oder College. In den USA gibt es staatliche und private Schulen. Die Mehrheit der Schüler besucht eine staatliche Schule, welche mit Steuergeldern finanziert wird. Für diejenigen, die eine private Schule besuchen, tragen die Eltern die Kosten, welche nach oben keine Grenzen haben. Der Leistungsdruck durch die hohen Erwartungen der Eltern, die oft viel Geld in ihre Kinder investieren, macht vielen Kindern zu schaffen. Das Gefühl, nie genug zu sein und den Erwartungen gerecht zu werden, setzen vor allem den Kindern elitärer Colleges und Internate zu, wie in der im Stück thematisierten Welton-Akademie.",
         blured: true
     },
     {
-        name: "Ausmaße von Druck auf Kinder",
+        name: "Ausmaße des Drucks auf Kinder",
         auther: "Kristina Wispler",
         text: "Eltern wollen das Beste für ihr Kind. Ihr Kind soll es einmal besser haben als Sie. Leider schießen Eltern bei diesen guten Wünschen immer mal wieder übers Ziel hinaus und aus dem ‚Besten fürs Kind‘ wird Überforderung durch zu hohe Erwartungen. Erwartungen, die Eltern an ihre Kinder haben, spiegeln in den vielen Fällen eigene unerfüllte Wünsche und Träume wider. Dabei passiert es häufig, dass die Wünsche oder Talente der Kinder hinter den Erwartungen der Eltern zurückbleiben. So lernt das Klavier, weil seine Mutter nie die Gelegenheit dazu hatte oder es wird zum Sport-Ass getrimmt, weil der Vater dies auch schon war oder selbst gerne gewesen wäre. Eltern, die an ihr Kind ständig sehr hohe Erwartungen haben, können bei diesem einen ungesunden Effekt auslösen: Es  kann übermäßig selbstkritisch werden oder könnte einen Perfektionismus entwickeln, der Depressionen, Ängste und sogar Selbstmordgedanken begünstigen kann. Das Kind empfindet sich als niemals gut genug – egal wie sehr es sich anstrengt. Lob macht Stolz, ermutigt zur Weiterarbeit und richtet die Aufmerksamkeit aller auf das, was das Kind bereits gut kann. Durch diese Stärkung kann es auch neue Aufgaben besser bewältigen.",
         blured: true
     },
-
 ]

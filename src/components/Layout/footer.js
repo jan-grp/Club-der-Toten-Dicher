@@ -33,8 +33,10 @@ const Footer = () => {
                         <Image 
                             src={HambornLogo}
                             alt="logo schloss hamborn"
-                            width={width < 500 ? 60 : 110}
-                            height={width < 500 ? 60 : 100}
+                            // width={width < 500 ? 60 : 110}
+                            // height={width < 500 ? 60 : 100}
+                            width={60}
+                            height={60}
                             styles={{
                                 borderRadius: 30
                             }}
@@ -52,7 +54,7 @@ const Footer = () => {
                 >
                     <motion.a 
                         className={styles.impressumLink}
-                        whileHover={{ textDecoration: "underline" }}
+                        whileHover={{ textDecorationLine: "underline" }}
                     >
                         Impressum
                     </motion.a>

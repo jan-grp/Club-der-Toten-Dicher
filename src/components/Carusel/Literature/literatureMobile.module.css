@@ -29,52 +29,57 @@
     flex-direction: column;
     display: flex;
     min-height: 620px;
-    padding-top: 60px;
     border-radius: 25px;
     margin-left: 10px;
     margin-right: 10px;
-    box-shadow: 0px 0px 14px rgba(0,0,0,0.75);
-    width: fit-content;
+    box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+    width: 95%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.poemTitle {
+    font-weight: 800;
+    font-size: 36px;
+    color: #fff;
     margin-left: auto;
     margin-right: auto;
-    padding-right: 50px;
-    padding-left: 20px;
+    margin-bottom: 5px;
 }
 
-.contentMobile {
-    background-color: #010B2E;
-    height: fit-content;
-    flex-direction: column;
-    display: flex;
-    min-height: 760px;
-}
-
-.topRow {
+.autherDiv {
     display: flex;
     flex-direction: row;
-    /* width: 100%; */
-    margin-left: auto;
-    margin-right: auto;
-    flex-wrap: wrap;
-    padding-bottom: 60px;
-
+    justify-content: space-between;
+    margin-bottom: 1rem;
 }
 
-.poetDev {
-    width: fit-content;
-    display: flex;
+.autherColumn {
     flex-direction: column;
 }
 
-.image {
+.autherName {
+    font-size: 1.2rem;
+    margin-bottom: 0px;
+    font-weight: bold;
+    color: #d7d7d7;
+}
+
+.date {
+    color: #d7d7d7;
+    margin-top: 4px;
+}
+
+.imageDiv {
+    margin-top: 20px;
+}
+
+.autherImage {
     border-radius: 50%;
 }
 
-.poetName {
+.poemText {
     color: #fff;
-    margin-top: 30px;
-    margin-left: auto;
-    margin-right: auto;
-    
-    font-weight: 600;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }

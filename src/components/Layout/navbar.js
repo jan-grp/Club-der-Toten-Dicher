@@ -6,7 +6,9 @@ import styles from './navbar.module.css'
 import { HiOutlineMenu } from 'react-icons/hi'
 import { IoMdClose } from 'react-icons/io'
 
-import { NavigationContext, SwitchNavigationContext } from '../../utils/context/navigation.context'
+import { NavigationContext, NavigationOptionsContext } from '../../utils/context/navigation.context'
+
+import { scrollTo } from '../../utils/scroll'
 
 import DropdownMenu from '../Dropdown/index'
 
@@ -54,6 +56,7 @@ const ScrolledWindow = styled.div`
 
 const Navbar = () => {
     const navigationContext = useContext(NavigationContext)
+    const navigationOptionsContext = useContext(NavigationOptionsContext)
 
     const [scrolled, setScrolled] = useState(false)
     const [isOpen, setIsOpen] = useState(false)
@@ -77,6 +80,10 @@ const Navbar = () => {
         }
     }
 
+    const scrollToTop = () => {
+        scrollTo({ ref: navigationOptionsContext[0].ref, duration: 500, offset: -1000 })
+    }
+
     return (
         <>
             {
@@ -84,7 +91,11 @@ const Navbar = () => {
                 isOpen && <ScrolledWindow
                     backgroundcolor={backgroundColor}
                 >
-                    <p className={styles.title}>Club der Toten Dichter</p>
+                    <p 
+                        className={styles.title}
+                    >
+                        Club der Toten Dichter
+                    </p>
 
                     <AnimatePresence
                         exitBeforeEnter
@@ -111,10 +122,15 @@ const Navbar = () => {
 
             {
                 // menu available but closed
-                (!isOpen && scrolled) && <ScrolledWindow
+                !isOpen && <ScrolledWindow
 
                 >
-                    <p className={styles.title}>Club der Toten Dichter</p>
+                    <p 
+                        className={styles.title}
+                        onClick={() => scrollToTop()}
+                    >
+                        Club der Toten Dichter
+                    </p>
 
                     <AnimatePresence
                         exitBeforeEnter
@@ -139,14 +155,14 @@ const Navbar = () => {
                 </ScrolledWindow>
             }
 
-            {
-                // menu is closed and not available
-                (!isOpen && !scrolled) && <Window>
+            {/* {
+                // menu is closed
+                !isOpen && <Window>
                     <p className={styles.title}>Club der Toten Dichter</p>
 
                     {isOpen && <DropdownMenu />}
                 </Window>
-            }
+            } */}
         </>
     )
 }

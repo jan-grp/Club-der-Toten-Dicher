@@ -183,7 +183,7 @@ export const leitung = [
     },
     {
         name: "Gerhard Sommer",
-        role: "Bühnenbild und Regie"
+        role: "Bühnenbild und Technik"
     },
     {
         name: "Barbara Kallenberg",

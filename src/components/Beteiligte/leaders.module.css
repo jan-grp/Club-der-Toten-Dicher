@@ -1,0 +1,28 @@
+.window {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    box-shadow: 0px 0px 10px 0px #d7d7d7;
+    padding-left: 50px;
+    padding-right: 30px;
+    padding-top: 20px;
+    border-radius: 20px;
+    margin-top: 40px;
+    padding-bottom: 40px;
+    height: fit-content;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.role {
+    color: #000;
+    font-weight: 800;
+    width: 160px;
+    font-size: 16px;
+    margin-right: 5px;
+}

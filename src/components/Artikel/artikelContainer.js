@@ -69,7 +69,7 @@ const ArtikelContainer = ({ artikel }) => {
             </ArtikelText>
 
             {collapsable && isBlured ? <ArtikelReadMoreButton onClick={showMore}/> : null}
-            {collapsable && !isBlured ? <ArtikelShowLessButton onClick={showLess}/> : null}
+            {collapsable && !isBlured && artikel.blured ? <ArtikelShowLessButton onClick={showLess}/> : null}
         </div>
     )
 }

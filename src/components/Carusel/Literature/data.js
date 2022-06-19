@@ -1,4 +1,7 @@
 import nietzscheImage from '../../../public/Images/Poets/Nietzsche.jpg'
+import fontaneImage from '../../../public/Images/Poets/Fontane.jpg'
+import neubautenImage from '../../../public/Images/Poets/einstuerzende-neubauten.jpg'
+import dickinsonImage from '../../../public/Images/Poets/emilyDickinson.jpg'
 
 export const poems = [
     {
@@ -14,5 +17,26 @@ export const poems = [
         image: nietzscheImage,
         date: "1908",
         text: "Ja! Ich weiß, woher ich stamme!\nUngesättigt gleich der Flamme\nGlühe und verzehr′ ich mich.\nLicht wird alles, was ich fasse,\nKohle alles, was ich lasse:\Flamme bin ich sicherlich."
+    },
+    {
+        title: "Laß ab von diesem Zweifeln, Klauben",
+        author: "Theodor Fontane",
+        image: fontaneImage,
+        date: "19. Jahrhundert",
+        text: "Laß ab von diesem Zweifeln, Klauben, Vor dem das Beste selbst zerfällt, Und wahre dir den vollen Glauben An diese Welt trotz dieser Welt. Schau hin auf eines Weibes Züge, Das lächelnd auf den Säugling blickt, Und fühl's, es ist nicht alles Lüge, Was uns das Leben bringt und schickt. Und, Herze, willst du ganz genesen, Sei selber wahr, sei selber rein! Was wir in Welt und Menschen lesen, Ist nur der eigne Widerschein."
+    },
+    {
+        title: "Was ist ist",
+        author: "Einstürzende Neubauten",
+        image: neubautenImage,
+        date: "2001",
+        text: "Was ist ist - Was nicht ist ist möglich - Was ist ist - Was nicht ist ist möglich Was ist ist - Was nicht ist ist möglich - Nur was nicht ist ist möglich - Was nicht ist ist möglich"
+    },
+    {
+        title: "Hoffnung ist das gefiedert Ding",
+        author: "Emily Elizabeth Dickinson",
+        image: dickinsonImage,
+        date: "19. Jahrhundert",
+        text: "Hoffnung ist das gefiedert Ding, das in der Seel' sich regt, und Lieder ohne Worte singt aufs Neue unentwegt."
     }
 ]

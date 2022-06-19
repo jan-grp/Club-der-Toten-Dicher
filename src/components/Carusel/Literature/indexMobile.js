@@ -3,21 +3,17 @@ import Image from 'next/image'
 import { useState, forwardRef, useEffect } from 'react'
 import useWindowDimensions from '../../../utils/hooks/window'
 
-import styles from "./literatur.module.css"
+import styles from "./literatureMobile.module.css"
 import { FaQuoteRight } from 'react-icons/fa'
 
 import Poem from './poem'
 import PoemSelector from './selector'
-import Poet from './poet'
 
 import { poems } from './data'
 
-const MIN_WIDTH = 900
-
 // eslint-disable-next-line react/display-name
-const LiteratureContent = forwardRef((props, ref) => {
+const LiteratureContentMobile = forwardRef((props, ref) => {
     const [selectedIndex, setSelectedIndex] = useState(0)
-    const [width, setWidth] = useState(null)
 
     const navigate = (direction) => {
         if (direction === "left") {
@@ -31,10 +27,6 @@ const LiteratureContent = forwardRef((props, ref) => {
         }
     }
 
-    useEffect(() => {
-        setWidth(window.innerWidth)
-    }, [])
-
     return(
         <div 
             className={styles.window}
@@ -45,26 +37,33 @@ const LiteratureContent = forwardRef((props, ref) => {
             <div className={styles.spacerTop} />
 
             <div 
-                className={
-                    width > MIN_WIDTH ? styles.content : styles.contentMobile
-                }
+                className={styles.content}
                 ref={props.poemScrollRef}
             >
 
-                <div className={styles.topRow}>
-                    {width > MIN_WIDTH && <Poet 
-                        image={poems[selectedIndex].image}
-                        name={poems[selectedIndex].author}
-                    />}
+                <div>
+                    <p className={styles.poemTitle}>{poems[selectedIndex].title}</p>
 
-                    {width > MIN_WIDTH && <FaQuoteRight color='#fff' size={50}/>}
-                    <Poem 
-                        title={poems[selectedIndex].title}
-                        date={poems[selectedIndex].date}
-                        text={poems[selectedIndex].text}
-                        author={poems[selectedIndex].author}
-                        width={width || 0}
-                    />
+                    <div className={styles.autherDiv}>
+                        <div className={styles.autherColumn}>
+                            <p className={styles.autherName}>{poems[selectedIndex].author}</p>
+                            <p className={styles.date}>{poems[selectedIndex].date}</p>
+                        </div>
+
+                        <div className={styles.imageDiv}>
+                            <Image 
+                                src={poems[selectedIndex].image}
+                                alt={poems[selectedIndex].author}
+                                className={styles.autherImage}
+                                width={50}
+                                height={50}
+                                priority
+                                objectFit='cover'
+                            />
+                        </div>                        
+                    </div>
+
+                    <p className={styles.poemText}>{poems[selectedIndex].text}</p>       
                 </div>
 
                 <PoemSelector 
@@ -77,4 +76,4 @@ const LiteratureContent = forwardRef((props, ref) => {
     ) 
 })
 
-export default LiteratureContent;
+export default LiteratureContentMobile

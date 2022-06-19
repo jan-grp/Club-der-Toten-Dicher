@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState, useEffect, forwardRef } from 'react'
-
+import { motion } from 'framer-motion'
+import Link from 'next/link'
 
 import CharacterContent from './index'
 import CharakterContentMobile from "./indexMobile"
@@ -52,6 +53,23 @@ const CharactersWrapper = forwardRef((props, ref) => {
                         characterDescription={item.text}
                     />
                 ))}
+                <Link
+                    href="/beteiligte"
+                >
+                    <motion.a 
+                        className={styles.moreCharacters}
+                        whileHover={{
+                            textDecorationLine: "underline"
+                        }}
+                        whileTap={{
+                            scale: .9,
+
+                        }}
+                        href='/beteiligte'
+                    >
+                        weitere Beteiligte
+                    </motion.a>
+                </Link>
             </div>
 
             <div className={styles.charactersSpacerBottom} />

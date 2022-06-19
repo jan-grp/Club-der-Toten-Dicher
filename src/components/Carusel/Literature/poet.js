@@ -27,6 +27,7 @@ const Poet = ({
                 height={300}
                 className={styles.image}
                 priority
+                objectFit='cover'
             />
 
             <label className={styles.poetName}>{name}</label>
