@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import Head from 'next/head'
 
 import BeteiligteNavbar from '../components/Beteiligte/navbar'
 import Actors from '../components/Beteiligte/actors'
@@ -16,6 +17,11 @@ const Beteiligte = () => {
 
     return(
         <div>
+            <Head>
+                <title>
+                    Beteiligte
+                </title>
+            </Head>
             <BeteiligteNavbar />
 
             <Window>

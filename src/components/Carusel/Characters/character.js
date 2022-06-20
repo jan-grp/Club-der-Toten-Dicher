@@ -20,6 +20,9 @@ const CharakterContainer = ({
                 y: 0,
                 x: 0
             }}
+            transition={{
+                type: "keyframes"
+            }}
             viewport={{ once: true, margin: "-80px" }}
         >
             <p className={styles.name}>{characterName}</p>

@@ -39,9 +39,10 @@ const SkipButton = ({
             {
                 direction == "left" && <AiOutlineArrowLeft 
                     marginright={"20px"}
+                    color="#fff"
                 />
             }
-            {direction == "right" && <AiOutlineArrowRight marginleft={"20px"}/>}
+            {direction == "right" && <AiOutlineArrowRight marginleft={"20px"} color="#fff" />}
         </Button>
     )
 }

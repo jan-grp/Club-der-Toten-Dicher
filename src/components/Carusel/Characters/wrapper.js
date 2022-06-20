@@ -31,7 +31,7 @@ const CharactersWrapper = forwardRef((props, ref) => {
                 <p 
                     className={width > MIN_WIDTH ? styles.charactersTitle : styles.charactersTitleMobile}
                 >
-                    Charaktere
+                    Charaktere 🎭
                 </p>
 
                 {width > MIN_WIDTH && data.map((item, index) => (

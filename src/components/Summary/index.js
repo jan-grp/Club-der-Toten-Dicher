@@ -37,13 +37,14 @@ const Headline = styled.div`
 const Text = styled.p`
     margin-top: 0;
     margin-bottom: 10px;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 15px;
 
     color: #000;
 `
 
 const MehrErfahren = styled(motion.a)`
+
     color: #248EFF;
     cursor: pointer;
     margin-left: auto;

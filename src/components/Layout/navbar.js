@@ -81,7 +81,7 @@ const Navbar = () => {
     }
 
     const scrollToTop = () => {
-        scrollTo({ ref: navigationOptionsContext[0].ref, duration: 500, offset: -1000 })
+        scrollTo({ ref: navigationOptionsContext[0].ref, duration: 800, offset: -1000 })
     }
 
     return (

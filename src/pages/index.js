@@ -39,20 +39,23 @@ export default function Home() {
 
   // defining refs
 
-    // scroll to top
-  //const { ref: topRef, inView: topInView } = useInView({})
-  const scrollToTopRef = useRef(null)
-  
+  // scroll to top
+  const scrollToTopRef = useRef(null)  
     
-    // characters
+  // characters
   const { ref: charactersRef, inView: charactersInView } = useInView({ threshold: 0.1})
   const charactersScrollRef = useRef(null)
   const scrollToCharakters = () => scrollTo({ref: charactersScrollRef, duration: 500, offset: 140})
 
-    // poems
+  // poems
   const { ref: poemRef, inView: poemInView } = useInView({ threshold: 0.2 })
   const poemScrollRef = useRef(null)
   const scrollToPoems = () => scrollTo({ref: poemScrollRef, duration: 500, offset: -200})
+
+  // sponsors
+  const { ref: sponsorsRef, inView: sponsorsInView } = useInView({ threshold: 0.1 })
+  const sponsorsScrollRef = useRef(null)
+  const scrollToSponsors = () => scrollTo({ ref: sponsorsScrollRef, duration: 500, offset: 0 })
 
   // pushing refs to context
   useEffect(() => {
@@ -60,6 +63,7 @@ export default function Home() {
     newOptions[0].ref = scrollToTopRef
     newOptions[1].ref = charactersScrollRef
     newOptions[2].ref = poemScrollRef
+    newOptions[3].ref = sponsorsScrollRef
     switchNavigationOptionsContext(newOptions)
   }, [])
 
@@ -111,7 +115,10 @@ export default function Home() {
         />
       }
 
-      <SponsorWrapper />
+      <SponsorWrapper 
+        ref={sponsorsRef}
+        sponsorsScrollRef={sponsorsScrollRef}
+      />
     </div>
   )
 }

@@ -14,6 +14,10 @@ export const navigationOptions = [
         ref: null,
     },
     {
+        name: "Sponsoren",
+        ref: null,
+    },
+    {
         name: "Artikel"
     }
 ]

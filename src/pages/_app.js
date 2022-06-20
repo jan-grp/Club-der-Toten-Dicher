@@ -3,8 +3,6 @@ import Navbar from '../components/Layout/navbar'
 import Footer from '../components/Layout/footer'
 import { useRouter } from 'next/router'
 
-import Layout from '../components/Layout/layout'
-
 import '../styles/globals.css'
 
 import { 
