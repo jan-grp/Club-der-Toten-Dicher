@@ -32,8 +32,6 @@ const NavigationDropdown = ({
 
     const navigateTo = (index) => {
         const content = navigationOptionsContext[index]
-        console.log("context: ", content)
-        console.log("index: ", index)
 
         if(content.name === "Artikel") return router.push('/artikel')
 

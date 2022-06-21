@@ -53,9 +53,9 @@ export default function Home() {
   const scrollToPoems = () => scrollTo({ref: poemScrollRef, duration: 500, offset: -200})
 
   // sponsors
-  const { ref: sponsorsRef, inView: sponsorsInView } = useInView({ threshold: 0.1 })
+  const { ref: sponsorsRef, inView: sponsorsInView } = useInView({ threshold: 0.3 })
   const sponsorsScrollRef = useRef(null)
-  const scrollToSponsors = () => scrollTo({ ref: sponsorsScrollRef, duration: 500, offset: 0 })
+  const scrollToSponsors = () => scrollTo({ ref: sponsorsScrollRef, duration: 700, offset: 0 })
 
   // pushing refs to context
   useEffect(() => {
@@ -84,6 +84,14 @@ export default function Home() {
       ref: poemScrollRef
     })
   }, [poemInView])
+
+  useEffect(() => {
+    // sponsors
+    poemInView && switchNavtigationContext({
+      name: "Sponsoren",
+      ref: sponsorsScrollRef
+    })
+  }, [sponsorsInView])
 
   return (
     <div className={styles.window}>
