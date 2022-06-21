@@ -34,6 +34,7 @@ const Text = styled.p`
 
 `
 
+// eslint-disable-next-line react/display-name
 const SponsorWrapper = forwardRef((props, ref) => {
 
 
