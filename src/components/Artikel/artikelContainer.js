@@ -81,6 +81,9 @@ const ArtikelContainer = ({ artikel }) => {
                     width={600}
                     height={400}
                     objectFit="cover"
+                    style={{
+                        borderRadius: 10,
+                    }}
                 />
                 </ImageDiv>
             }

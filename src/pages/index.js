@@ -111,12 +111,13 @@ export default function Home() {
         charactersScrollRef={charactersScrollRef}
       />
       
-      <div>
+      <div className={styles.studentsChairsImageDiv}>
         <Image 
           src={studentsOnChairs}
           width={600}
           height={450}
-          objectFit="fill"
+          objectFit="cover"
+          style={{ borderRadius: 20 }}
         />
       </div>
 

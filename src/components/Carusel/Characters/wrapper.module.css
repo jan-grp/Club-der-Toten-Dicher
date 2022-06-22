@@ -12,7 +12,8 @@
     background-size: cover;
     background-image: url("../../../public/Spacers/characters-top-black.svg");
     /* margin-bottom: -100px; */
-    margin-top: 50vh,   
+    margin-top: 50vh;
+    margin-bottom: -6px;
 }
 
 .charactersTitle {
@@ -35,6 +36,7 @@
 
 .charactersSpacerBottom {
     aspect-ratio: 960/150;
+    margin-top: -3px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

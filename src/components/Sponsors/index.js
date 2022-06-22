@@ -42,19 +42,8 @@ const SponsorWrapper = forwardRef((props, ref) => {
 
             <Sponsor>
                 <Image 
-                    src={ThielenMalerbetrieb}
-                    alt="Thielen Malerbetrieb add"
-                    width={640}
-                    height={420}
-                    objectFit="cover"
-                    priority
-                />
-            </Sponsor>
-
-            <Sponsor>
-                <Image 
                     src={ECuno}
-                    alt="Thielen Malerbetrieb add"
+                    alt="E-Cuno add"
                     width={640}
                     height={420}
                     objectFit="cover"
@@ -65,10 +54,21 @@ const SponsorWrapper = forwardRef((props, ref) => {
             <Sponsor>
                 <Image 
                     src={Linsenmanufaktur}
-                    alt="Thielen Malerbetrieb add"
+                    alt="Linsenmaufaktur add"
                     width={400}
                     height={200}
                     objectFit="cover"
+                />
+            </Sponsor>
+
+            <Sponsor>
+                <Image 
+                    src={ThielenMalerbetrieb}
+                    alt="Thielen Malerbetrieb add"
+                    width={640}
+                    height={420}
+                    objectFit="cover"
+                    priority
                 />
             </Sponsor>
         </Winodw>

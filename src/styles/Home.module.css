@@ -31,3 +31,10 @@
     background-image: url("../public/Spacers/characters-bottom-black.svg");
     /* margin-bottom: -100px; */
 }
+
+.studentsChairsImageDiv {
+    margin-top: 25px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
