@@ -10,6 +10,8 @@ import Summary from '../components/Summary/index'
 import LiteratureContentMobile from '../components/Carusel/Literature/indexMobile'
 import SponsorWrapper from '../components/Sponsors'
 
+import studentsOnChairs from '../public/Images/studentsOnChairs.jpeg'
+
 import { 
   NavigationContext, 
   SwitchNavigationContext, 
@@ -108,6 +110,15 @@ export default function Home() {
         ref={charactersRef}
         charactersScrollRef={charactersScrollRef}
       />
+      
+      <div>
+        <Image 
+          src={studentsOnChairs}
+          width={600}
+          height={450}
+          objectFit="fill"
+        />
+      </div>
 
       {
         width > 900 && <LiteratureContent 

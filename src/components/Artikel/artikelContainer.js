@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { useState, useEffect } from 'react'
+import Image from 'next/image'
 
 import styles from './artikelContainer.module.css'
 
@@ -15,6 +16,12 @@ const ArtikelText = styled.div`
 
     ${props => props.maxheight && "-webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);"}
     ${props => props.maxheight && "mask-image: linear-gradient(to bottom, black 40%, transparent 100%);"}
+`
+
+const ImageDiv = styled.div`
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
 `
 
 const ArtikelContainer = ({ artikel }) => {
@@ -67,6 +74,16 @@ const ArtikelContainer = ({ artikel }) => {
             >
                 {artikel && artikel.text}
             </ArtikelText>
+
+            {artikel.image && <ImageDiv>
+                <Image 
+                    src={artikel.image}
+                    width={600}
+                    height={400}
+                    objectFit="cover"
+                />
+                </ImageDiv>
+            }
 
             {collapsable && isBlured ? <ArtikelReadMoreButton onClick={showMore}/> : null}
             {collapsable && !isBlured && artikel.blured ? <ArtikelShowLessButton onClick={showLess}/> : null}

@@ -1,11 +1,13 @@
-
+import McAllistar from '../../public/Images/McAlistar.jpeg'
+import stressStudents from '../../public/Images/stressStudents.jpeg'
 
 export const artikel = [
     {
         name: "Schule in der Mitte des 20.Jahrhunderts",
         auther: "Jasper Fiswick",
         text: "Ein großer Raum, in dem die Handlung unsers Theaterstück spielt, ist die Schule in den um die 60er Jahren.  Zu heutigen Verhältnissen und besonders zu unseren eigenen Erfahrungen als Schüler gibt es doch große Unterschiede bei den Lernmethoden, die heute unvorstellbar wären. Samstags Unterricht, Fächer wie Schönschreiben und körperliche Züchtigungen gehörten zum Schulalltag dazu, auch wenn diese Methoden sich langsam begannen zu wandeln. Die strickte Trennung von Jungs und Mädchen wurde immer mehr infrage gestellt und aufgelöst. Auch die Interaktion von Lehrer und Schüler veränderte sich maßgeblich, der autoritäre Lehrer, der nur im Mittelpunkt steht und sein Lernstoff runter leierte und die Schüler gucken mussten, wie sie mitkommen, wurden immer mehr abgelöst. Bei damaligen Lehrern war das Wort Mitarbeit meist nicht in ihrem Wortschatz vorhanden, während heute die Mitarbeit von Schülern eine Säule unsers Schulsystems ist.\nAuch die individuelle Förderung des einzeln ist im Laufe der Zeit viel mehr in den Vordergrund gerückt, während noch zu dem Zeitpunkt des Stücks eine friss oder stirb Mentalität vorherrschte.",
-        blured: true
+        blured: true,
+        image: McAllistar
     },
     {
         name: "Amerikanische Literaturgeschichte",
@@ -29,6 +31,7 @@ export const artikel = [
         name: "Ausmaße des Drucks auf Kinder",
         auther: "Kristina Wispler",
         text: "Eltern wollen das Beste für ihr Kind. Ihr Kind soll es einmal besser haben als Sie. Leider schießen Eltern bei diesen guten Wünschen immer mal wieder übers Ziel hinaus und aus dem ‚Besten fürs Kind‘ wird Überforderung durch zu hohe Erwartungen. Erwartungen, die Eltern an ihre Kinder haben, spiegeln in den vielen Fällen eigene unerfüllte Wünsche und Träume wider. Dabei passiert es häufig, dass die Wünsche oder Talente der Kinder hinter den Erwartungen der Eltern zurückbleiben. So lernt das Klavier, weil seine Mutter nie die Gelegenheit dazu hatte oder es wird zum Sport-Ass getrimmt, weil der Vater dies auch schon war oder selbst gerne gewesen wäre. Eltern, die an ihr Kind ständig sehr hohe Erwartungen haben, können bei diesem einen ungesunden Effekt auslösen: Es  kann übermäßig selbstkritisch werden oder könnte einen Perfektionismus entwickeln, der Depressionen, Ängste und sogar Selbstmordgedanken begünstigen kann. Das Kind empfindet sich als niemals gut genug – egal wie sehr es sich anstrengt. Lob macht Stolz, ermutigt zur Weiterarbeit und richtet die Aufmerksamkeit aller auf das, was das Kind bereits gut kann. Durch diese Stärkung kann es auch neue Aufgaben besser bewältigen.",
-        blured: true
+        blured: true,
+        image: stressStudents
     },
 ]

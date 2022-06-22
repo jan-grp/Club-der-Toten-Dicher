@@ -2,8 +2,6 @@ import styled from 'styled-components'
 import React, { forwardRef } from 'react'
 import Image from 'next/image'
 
-import SponsorHeader from './header'
-
 import ThielenMalerbetrieb from '../../public/Sponsoren/ThieleMalerbetrieb.png'
 import Linsenmanufaktur from '../../public/Sponsoren/Linsenmanufaktur.png'
 import ECuno from '../../public/Sponsoren/e-cuno.png'
