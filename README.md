@@ -1,6 +1,6 @@
 # What is this?
 This is a small website that has been used by a german highschool to distribute informations about a theatre play they did.
-This had to be done in short period of time, so the code is not as well structured has it could be.
+This had to be done in short period of time, so the code is not as well structured has it could be. Also there are more things hard-coded as whish there to be.
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
